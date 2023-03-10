@@ -1,0 +1,79 @@
+*{
+    background: beige;
+    font-family: 'Golos Text', sans-serif;
+    margin: 0 auto;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+h1{
+    font-size: 7em;
+}
+/* Acordion */
+.acordionContainer .acordionBody {
+    width: calc(100% - 40px);
+    height: 0;
+    color: #00000000;
+    background-color: #feffbf;
+    line-height: 18px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    transition: color 0.5s, padding 0.5s;
+    overflow: hidden;
+    box-shadow: 0 4px 8px #00000033, 0 10px 16px #00000033;
+}
+/* Шапка аккордиона */
+.acordionContainer label {
+    text-align: center;
+    cursor: pointer;
+    background-color: rgb(222, 222, 176);
+    display: block;
+    padding: 15px 20px;
+    width: 100%;
+    color: 000;
+    font-weight: 300;
+    box-sizing: border-box;
+    z-index: 100;
+    font-size: 18px;
+    margin: 0 0 5px;
+    transition: color .35s;
+    border-radius: 1em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+}
+.acordionContainer label:hover{
+    color: #000;
+}
+.acordionContainer input{
+    display: none;
+}
+.acordionContainer label:before {
+    content: '\276F';
+    float: right;
+}
+.acordionContainer input:checked + label {
+    text-align: center;
+    background-color: #cfcf99;
+    color: #FFF;
+    box-shadow: 0 8px 26px #00000066, 0 28px 30px #0000004d;
+}
+.acordionContainerr input:checked + label:before {
+    transition: transform .35s;
+    transform: rotate(90deg);
+}
+.acordionContainer input:checked + label + .acordionBody {
+    height: auto;
+    margin-top: -5px;
+    color: #000;
+    padding: 20px 30px 10px;
+}
+/* Images */
+.meme1Img{
+    width: 50em;
+}
