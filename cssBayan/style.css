@@ -1,0 +1,120 @@
+*{
+    background: beige;
+    font-family: 'Golos Text', sans-serif;
+    margin: 0 auto;
+    -webkit-tap-highlight-color: transparent;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+h1{
+    font-size: 7em;
+}
+header{
+    margin-bottom: 1em;
+}
+/* Acordion */
+.acordionContainer .acordionBody {
+    height: 0;
+    color: #00000000;
+    background-color: #feffbf;
+    line-height: 18px;
+    padding: 0 2vw;
+    box-sizing: border-box;
+    transition: color 0.5s, padding 0.5s;
+    overflow: hidden;
+    box-shadow: 0 4em 8em #00000033, 0 2em 2em #00000033;
+    -webkit-transition: color 0.5s, padding 0.5s;
+    -moz-transition: color 0.5s, padding 0.5s;
+    -ms-transition: color 0.5s, padding 0.5s;
+    -o-transition: color 0.5s, padding 0.5s;
+}
+.acordionContainer:hover .acordionBody:hover{
+    cursor: pointer;
+}
+/* Шапка аккордиона */
+.acordionContainer label {
+    cursor: pointer;
+    background-color: rgb(222, 222, 176);
+    display: block;
+    padding: 1em;
+    width: 100%;
+    color: #000;
+    font-weight: 300;
+    box-sizing: border-box;
+    font-size: 1.3em;
+    margin: 0 0 0.3em;
+    transition: color .3s;
+    border-radius: 1em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+    -webkit-transition: color .3s;
+    -moz-transition: color .3s;
+    -ms-transition: color .3s;
+    -o-transition: color .3s;
+}
+.acordionContainer label:hover{
+    color: #000;
+}
+/* ---------- */
+.acordionContainer input{
+    display: none;
+}
+.acordionContainer label:before {
+    content: '\002B';
+    float: right;
+}
+.acordionContainer input:checked + label {
+    background-color: #cfcf99;
+    color: #FFF;
+    box-shadow: 0 4em 8em #00000033, 0 2em 2em #00000033;
+}
+.acordionContainer input:checked + label:before {
+    transition: transform .3s;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -webkit-transition: transform .3s;
+    -moz-transition: transform .3s;
+    -ms-transition: transform .3s;
+    -o-transition: transform .3s;
+}
+.acordionContainer input:checked + label + .acordionBody {
+    height: auto;
+    color: #000;
+    padding: 2em 2em;
+    border-radius: 1em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+}
+/* Images */
+.memeImg{
+    width: 50em;
+}
+@media screen and (max-width: 1180px) and (orientation: landscape) {
+    h1{
+        font-size: 5em;
+    }
+}
+@media screen and (max-width: 320px) and (orientation: portrait) {
+    h1{
+        text-align: center;
+        font-size: 3em;
+    }
+    .acordionContainer .acordionBody{
+        width: 18rem;
+    }
+    .memeImg{
+        width: 14em;
+    }
+}
